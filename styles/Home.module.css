@@ -166,3 +166,13 @@ a.secondary {
     filter: invert();
   }
 }
+
+
+.footer {
+  background-color: rgb(233, 184, 60);
+}
+
+#main {
+  background-color: #fff;
+  color: black;
+}

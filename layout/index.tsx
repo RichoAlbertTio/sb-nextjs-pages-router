@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,9 +31,16 @@ export default function RootLayout(
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div>Header</div>
-        <div>{children}</div>
-        <div>Footer</div>
+        {/* cara akses style global */}
+        {/* style global ini di render sama misal header = header */}
+        <div className="header">Header</div>
+        {/* cara akses style module */}
+        {/* cara akses id namun tidak di sarankan */}
+        <div id={styles.main}>{children}</div>
+        {/* cara akses style module */}
+        {/* style module ini di render sama unique footer = akan du generate berbeda namanya */}
+        <div className={styles.footer}>Footer</div>
+
       </div>
     </>
   );
