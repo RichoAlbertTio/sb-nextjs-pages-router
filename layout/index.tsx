@@ -33,6 +33,10 @@ export default function RootLayout({ children, metaTitle }: { children: React.Re
               <li>
                 <Link href="/about">About</Link>
               </li>
+              <li>
+                <Link href="/profile">Profile</Link>
+              </li>
+             
             </ul>
           </div>
         </header>
