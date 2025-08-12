@@ -36,6 +36,9 @@ export default function RootLayout({ children, metaTitle }: { children: React.Re
               <li>
                 <Link href="/profile">Profile</Link>
               </li>
+              <li>
+                <Link href="/notes/server">Notes</Link>
+              </li>
              
             </ul>
           </div>
