@@ -44,7 +44,7 @@ export default function NotePage({ note, error }: InferGetServerSidePropsType<ty
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8">
+    <div className="min-h-screen  py-8">
       <div className="max-w-4xl mx-auto px-4">
         <div className="bg-white shadow-sm rounded-lg p-6">
           <div className="mb-4">

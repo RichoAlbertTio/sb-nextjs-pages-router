@@ -23,13 +23,20 @@ export const getServerSideProps: GetServerSideProps<{ notes: Notes }> = async ()
 
 export default function NotesServerPage({ notes }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
-    <div className="grid grid-cols-4 gap-4">
-      {notes.data.map((note: ListNotes) => (
-        <Link href={`/notes/server/${note.id}`} key={note.id} className="p-4 bg-white shadow-sm rounded-lg">
-          <h1>{note.title}</h1>
-          <p>{note.description}</p>
+    <>
+      <div className="mb-4 mt-4">
+        <Link href="/notes/server/create" className="p-4 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">
+          Create Note
         </Link>
-      ))}
-    </div>
+      </div>
+      <div className="grid grid-cols-4 gap-4">
+        {notes.data.map((note: ListNotes) => (
+          <Link href={`/notes/server/${note.id}`} key={note.id} className="p-4 bg-white shadow-sm rounded-lg">
+            <h1 className="font-bold">{note.title}</h1>
+            <p className="text-gray-600">{note.description}</p>
+          </Link>
+        ))}
+      </div>
+    </>
   );
 }
