@@ -23,7 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     const data = await response.json();
-    console.log("API Response:", { status: response.status, ok: response.ok, data });
 
     // Check if creation was successful based on message or status
     const isSuccess = response.ok || (data.message && data.message.toLowerCase().includes("successfully created")) || data.status === "OK";
